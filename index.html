@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letigo Studios</title>
+
+  <link rel="icon" type="image/png" href="vinyl-record.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js" defer></script>
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="header-nav">
+      <div class="nav-left">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+      </div>
+
+      <h1 class="site-title">Letigo Studios</h1>
+
+      <div class="nav-right">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero-image" style="margin-bottom: 0;">
+    <div class="hero-overlay" style="margin-bottom: 0; padding-bottom: 0;">
+      <div class="hero-text" style="margin-bottom: 0;">
+        <h1>Let The King Cook.</h1>
+        <p>Recording, Mixing, Mastering & More — in person or online.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lottie animation -->
+  <div id="lottie-hero" style="width:150px; height:150px; margin: 20px auto;"></div>
+
+  <!-- About -->
+  <div class="section" id="about" style="max-width: 1200px; margin: 0 auto; padding: 0 20px 50px;">
+    <h2 style="text-align: center; font-size: 3rem; font-weight: 700; margin-top: 0; margin-bottom: 0.7em; color: #fff;">
+      Letigo Studios – Mixing With Intention
+    </h2>
+    <h3 style="text-align: center; font-weight: 500; font-size: 1.5rem; margin-bottom: 2.5em; color: #eee;">
+      Looking for a mixing/recording engineer that will chase your artistic vision with you?
+    </h3>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center; justify-content: center;">
+      <!-- Left: Studio image -->
+      <div style="flex: 1 1 320px; max-width: 600px;">
+        <img 
+          src="studio-placeholder.jpg" 
+          alt="Letigo Studios workspace" 
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" 
+        />
+      </div>
+
+      <!-- Right: About text -->
+      <div style="flex: 1 1 320px; max-width: 500px; font-size: 1.15rem; line-height: 1.8; color: #eee;">
+        <p>
+          Letigo Studios is a creative space led by Ezra — a producer, mixing engineer, and multi-instrumentalist passionate about capturing authentic performances and elevating artists’ visions. With roots in R&B, hip-hop, and indie, Ezra blends musicality and technical expertise to deliver mixes that feel alive.
+        </p>
+        <p>
+          Our mission is simple: to be your trusted partner in bringing your ideas to life, whether in-person or remotely, with intention and care. At Letigo, every project is about more than sound — it’s about crafting a sonic journey that truly represents you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="section" id="services" style="max-width: 960px; margin: 0 auto; padding-bottom: 60px;">
+    <h2 style="text-align: center; margin-bottom: 40px;">Services & Rates</h2>
+    
+    <!-- 2x2 Grid of service cards -->
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Mixing</h3>
+        <p>From $150/song · Includes revisions, TV mix, up to 40 stems.</p>
+        <button class="order-btn" onclick="location.href='order-form.html'">Order Now</button>
+      </div>
+      <div class="service-card">
+        <h3>Mastering</h3>
+        <p>$50/song · Final polish, LUFS, all formats.</p>
+        <button class="order-btn" onclick="location.href='order-form.html'">Order Now</button>
+      </div>
+      <div class="service-card">
+        <h3>Vocal Production</h3>
+        <p>$50–$100 · Tuning, comping, effects.</p>
+        <button class="order-btn" onclick="location.href='order-form.html'">Order Now</button>
+      </div>
+      <div class="service-card">
+        <h3>Recording (Boston)</h3>
+        <p>$40/hr or bundle sessions for discounts. Mobile setup available.</p>
+        <button class="order-btn" onclick="location.href='order-form.html'">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Session Musicians Section -->
+    <div class="session-musicians-section">
+      <h2 style="text-align: center; margin: 60px 0 30px;">Session Musicians</h2>
+      <p style="max-width: 700px; margin: 0 auto 40px; text-align: center; color: #ddd; font-size: 1.1rem;">
+        A curated collection of top musicians from Berklee, NEC, Juilliard, Curtis, and more —  
+        ready to record remotely and provide the perfect performance for your project.
+      </p>
+
+      <!-- Horizontal scroll gallery -->
+      <div class="musicians-gallery">
+        <!-- Example musician card -->
+        <a href="musician-levi.html" class="musician-card">
+          <img src="musician-levi-headshot.jpg" alt="Levi - Saxophone" />
+          <img src="musician-levi-performing.jpg" alt="Levi performing" class="performing-photo" />
+          <div class="musician-info">
+            <h3>Levi</h3>
+            <p>Saxophone | Jazz & Big Band Specialist</p>
+          </div>
+        </a>
+        <!-- Add more musician cards here -->
+        <a href="musician-anna.html" class="musician-card">
+          <img src="musician-anna-headshot.jpg" alt="Anna - Guitar" />
+          <img src="musician-anna-performing.jpg" alt="Anna performing" class="performing-photo" />
+          <div class="musician-info">
+            <h3>Anna</h3>
+            <p>Guitar | Versatile Session Player</p>
+          </div>
+        </a>
+        <a href="musician-james.html" class="musician-card">
+          <img src="musician-james-headshot.jpg" alt="James - Piano" />
+          <img src="musician-james-performing.jpg" alt="James performing" class="performing-photo" />
+          <div class="musician-info">
+            <h3>James</h3>
+            <p>Piano | Contemporary & Classical</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <div class="section" id="portfolio">
+    <h2>Selected Work</h2>
+    <p>Hear before & afters or view recent projects from Letigo clients.</p>
+  </div>
+
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/67Oq8booO7HDSL4LlmHE4s?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Letigo Studios
+  </footer>
+</body>
+</html>
