@@ -1,0 +1,536 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0e0e0e;
+  color: #f1f1f1;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+  background: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 10px 30px;
+}
+
+/* Header nav flex container */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Site title in center */
+.site-title {
+  margin: 0;
+  font-size: 1.8em;
+  color: #f1f1f1;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+  flex-grow: 0;
+  user-select: none;
+}
+
+/* Left and right nav groups */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 25px;
+  flex-grow: 1;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+header h1, header nav a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.header-nav a:hover {
+  color: #00aaff;
+}
+
+/* Hero image area */
+.hero-image {
+  position: relative;
+  background-image: url('analog-gear.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 650px;
+  overflow: hidden;
+}
+
+/* Overlay behind text with slope */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60vw;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+
+  clip-path: polygon(
+    0 0,
+    85% 0,
+    70% 100%,
+    0 100%
+  );
+}
+
+/* Text inside overlay */
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #ddd;
+  white-space: normal;      /* allow wrapping */
+  word-break: break-word;   /* break long words if needed */
+  overflow-wrap: break-word;
+  max-width: 70%;          /* limit to container width */
+  margin: 0 auto;           /* center if needed */
+  display: inline-block;    /* shrink to content */
+  box-sizing: border-box;
+  padding-right: 10px;      /* optional padding to prevent cut off */
+}
+
+/* Section styling */
+.section {
+  padding: 40px 20px;
+  scroll-margin-top: 90px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual Service Card */
+.service-card {
+  background: #1e1e1e;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.6);
+}
+
+/* Order Now button */
+.order-btn {
+  background: #00aaff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.order-btn:hover {
+  background: #008fcc;
+}
+
+/* Portfolio */
+#portfolio {
+  max-width: 960px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+#portfolio h2 {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Spacer */
+.section-spacer {
+  height: 120px;
+  background-color: #0e0e0e;
+}
+
+/* Parallax Section */
+.parallax-section {
+  background-image: url('analog-mixer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding: 80px 20px;
+  animation: slowScroll 60s linear infinite;
+}
+
+@keyframes slowScroll {
+  0% {
+    background-position: center 0;
+  }
+  100% {
+    background-position: center 100px;
+  }
+}
+
+/* --- A/B Sample player — horizontal media bar --- */
+.sample-player {
+  background: #262626;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 760px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.player-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.genre-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 100px;
+}
+
+.genre-name {
+  color: #e6e6e6;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.play-pause {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2f2f2f;
+  color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}
+.play-pause:hover { transform: scale(1.03); background: #3a3a3a; }
+
+.progress-area { flex: 1; display: flex; align-items: center; gap: 12px; }
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.progress {
+  height: 100%;
+  width: 0%;
+  transition: width 0.08s linear;
+  background: linear-gradient(90deg, #4534c0 0%, #2656ce 35%, #2982b5 100%);
+}
+
+.player-bottom {
+  display: flex;
+}
+
+.switch-container {
+  width: 100%;
+  display: flex;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+}
+
+.switch-a,
+.switch-b {
+  flex: 1;
+  border: none;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.switch-a.active {
+  background: #e0443a;
+  color: #fff;
+}
+
+.switch-b.active {
+  background: #2aa7ff;
+  color: #042033;
+}
+
+/* Responsive Enhancements */
+
+/* 1. Center hero text + full overlay background below ~900px */
+@media (max-width: 900px) {
+  .hero-overlay {
+    width: 100% !important;
+    clip-path: none !important;
+    padding: 20px !important;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1,
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* 2. Hide left and right header nav items (Letigo) on tablets and phones */
+@media (max-width: 900px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .header-nav {
+    justify-content: center !important;
+  }
+}
+
+/* 3. Smaller text in About section on smaller screens */
+@media (max-width: 768px) {
+  .section.about p,
+  .section.about h2 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
+/* Additional responsiveness */
+
+/* Small devices (iPhones, ~320-480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    gap: 15px;
+    flex-grow: 0;
+  }
+
+  .site-title {
+    font-size: 1.4em;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-image {
+    height: 400px;
+    background-attachment: scroll;
+  }
+
+  .hero-overlay {
+    width: 90vw !important;
+    padding: 15px 20px !important;
+    clip-path: none !important;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  .order-btn {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
+
+/* Medium devices (tablets/iPad, ~481-768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .header-nav {
+    max-width: 700px;
+    gap: 15px;
+  }
+
+  .site-title {
+    font-size: 1.6em;
+  }
+
+  .hero-image {
+    height: 500px;
+    background-attachment: scroll;
+  }
+
+  .hero-overlay {
+    width: 70vw !important;
+    padding: 20px 30px !important;
+    clip-path: polygon(0 0, 85% 0, 70% 100%, 0 100%);
+  }
+
+  .hero-text h1 {
+    font-size: 2.1em;
+  }
+
+  .hero-text p {
+    font-size: 1.1em;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 90%;
+  }
+
+  .order-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Fix parallax background issues on iOS and mobile */
+@supports (-webkit-overflow-scrolling: touch) {
+  .hero-image {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Accessibility and touch targets */
+button,
+.order-btn,
+.switch-a,
+.switch-b {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+
+
+/* Base styles (large screens) */
+.hero-overlay {
+  width: 60vw;
+  clip-path: polygon(0 0, 85% 0, 70% 100%, 0 100%);
+  padding: 20px 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Trigger full overlay and centered text at 1024px and below */
+@media (max-width: 1024px) {
+  .hero-overlay {
+    width: 100% !important;
+    clip-path: none !important;
+    padding: 20px !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-text h1,
+  .hero-text p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
